@@ -6,17 +6,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>域名出售</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f9fafb;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px;
+    }
+
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+    }
+
+    .card p {
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+    }
+
+    .card a {
+      color: #1a202c;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
-<body class="bg-gray-100">
-  <div class="container mx-auto py-8">
-    <h1 class="text-4xl font-bold text-center mb-8">域名出售</h1>
-    <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-8">
-      <p class="text-lg mb-4">721hub.com 可作为web3 nft (ERC-721) 网站。</p>
-      <p class="text-lg mb-4">如果你有兴趣购买，请联系我们：</p>
-      <p class="text-lg mb-4">Email: <a href="mailto:ptlizhicheng@gmail.com">ptlizhicheng@gmail.com</a></p>
+<body>
+  <div class="container">
+    <h1 class="title">域名出售</h1>
+    <div class="card">
+      <p>721hub.com 可作为web3 nft (ERC-721) 网站。</p>
+      <p>如果你有兴趣购买，请联系我们：</p>
+      <p>Email: <a href="mailto:ptlizhicheng@gmail.com">ptlizhicheng@gmail.com</a></p>
     </div>
   </div>
+
+  <script>
+    // 获取浏览器语言
+    var userLang = navigator.language || navigator.userLanguage;
+
+    // 判断语言并设置页面内容
+    if (userLang.includes("zh")) {
+      document.querySelector(".title").textContent = "域名出售";
+      document.querySelectorAll(".card p")[0].textContent = "721hub.com 可作为web3 nft (ERC-721) 网站。";
+      document.querySelectorAll(".card p")[1].textContent = "如果你有兴趣购买，请联系我们：";
+      document.querySelectorAll(".card p")[2].innerHTML = "Email: <a href='mailto:ptlizhicheng@gmail.com'>ptlizhicheng@gmail.com</a>";
+    } else {
+      document.querySelector(".title").textContent = "Domain for Sale";
+      document.querySelectorAll(".card p")[0].textContent = "721hub.com can be used as a web3 NFT (ERC-721) website.";
+      document.querySelectorAll(".card p")[1].textContent = "If you are interested in purchasing, please contact us:";
+      document.querySelectorAll(".card p")[2].innerHTML = "Email: <a href='mailto:ptlizhicheng@gmail.com'>ptlizhicheng@gmail.com</a>";
+    }
+  </script>
 </body>
 
 </html>
